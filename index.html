@@ -65,6 +65,7 @@
       <ul class="nav-menu" id="navMenu">
         <li><a href="#home" class="nav-link">Home</a></li>
         <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
         <li><a href="#skills" class="nav-link">Skills</a></li>
         <li><a href="#projects" class="nav-link">Projects</a></li>
         <li><a href="#research" class="nav-link">Research</a></li>
@@ -227,17 +228,139 @@
         
         <div class="about-stats">
           <div class="stat-item">
-            <div class="stat-number" data-target="5">0</div>
+            <div class="stat-number" data-target="2">0</div>
             <div class="stat-label">Years Experience</div>
           </div>
           <div class="stat-item">
-            <div class="stat-number" data-target="20">0</div>
+            <div class="stat-number" data-target="15">0</div>
             <div class="stat-label">Projects Completed</div>
           </div>
           <div class="stat-item">
             <div class="stat-number" data-target="2">0</div>
             <div class="stat-label">Research Papers</div>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="experience-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="title-icon">💼</span>
+          Professional Experience
+        </h2>
+        <div class="title-line"></div>
+      </div>
+      
+      <div class="experience-timeline">
+        <div class="experience-item">
+          <div class="experience-header">
+            <div class="experience-icon">
+              <i class="fas fa-code"></i>
+            </div>
+            <div class="experience-info">
+              <h3 class="experience-title">Software Engineer</h3>
+              <div class="experience-company">MangoApps India Pvt. Ltd.</div>
+              <div class="experience-location">Pune, India</div>
+              <div class="experience-duration">June 2024 – Present</div>
+            </div>
+          </div>
+          <div class="experience-content">
+            <ul class="experience-achievements">
+              <li>Implemented 10+ Product Features using Ruby on Rails for backend and React, JavaScript, HTML, and CSS for frontend, ensuring a seamless user experience.</li>
+              <li>Improved existing product features by optimizing database queries, refactoring code, and enhancing UI/UX to boost performance and user engagement.</li>
+              <li>Contributed to the development of AI Studio, now live for customers, enhancing AI-powered workflows.</li>
+            </ul>
+            <div class="experience-tech">
+              <span class="tech-badge">Ruby on Rails</span>
+              <span class="tech-badge">React</span>
+              <span class="tech-badge">JavaScript</span>
+              <span class="tech-badge">AI/ML</span>
+            </div>
+          </div>
+          <!-- SVG Animation for Software Engineer -->
+          <svg class="experience-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="45" fill="none" stroke="rgba(0, 212, 255, 0.1)" stroke-width="2"/>
+            <circle cx="50" cy="50" r="45" fill="none" stroke="rgba(0, 212, 255, 0.3)" stroke-width="2" stroke-dasharray="283" stroke-dashoffset="283" class="svg-circle">
+              <animate attributeName="stroke-dashoffset" values="283;0;283" dur="3s" repeatCount="indefinite"/>
+            </circle>
+            <path d="M30 50 L45 65 L70 35" stroke="rgba(0, 212, 255, 0.8)" stroke-width="3" fill="none" class="svg-check">
+              <animate attributeName="stroke-dasharray" values="0,50;50,0" dur="2s" repeatCount="indefinite"/>
+            </path>
+          </svg>
+        </div>
+
+        <div class="experience-item">
+          <div class="experience-header">
+            <div class="experience-icon">
+              <i class="fab fa-ruby"></i>
+            </div>
+            <div class="experience-info">
+              <h3 class="experience-title">Ruby on Rails Developer Intern</h3>
+              <div class="experience-company">Josh Software Pvt. Ltd.</div>
+              <div class="experience-location">Pune, India</div>
+              <div class="experience-duration">July 2022 – Jan 2024</div>
+            </div>
+          </div>
+          <div class="experience-content">
+            <ul class="experience-achievements">
+              <li>Learned Ruby on Rails through hands-on learning and senior developer mentorship, contributing to multiple projects.</li>
+              <li>Resolved bugs in applications, enhancing functionality and user experience.</li>
+            </ul>
+            <div class="experience-tech">
+              <span class="tech-badge">Ruby on Rails</span>
+              <span class="tech-badge">Mentorship</span>
+              <span class="tech-badge">Bug Fixing</span>
+            </div>
+          </div>
+          <!-- SVG Animation for Rails Developer -->
+          <svg class="experience-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <rect x="25" y="25" width="50" height="50" fill="none" stroke="rgba(255, 107, 53, 0.1)" stroke-width="2"/>
+            <rect x="25" y="25" width="50" height="50" fill="none" stroke="rgba(255, 107, 53, 0.3)" stroke-width="2" stroke-dasharray="200" stroke-dashoffset="200" class="svg-rect">
+              <animate attributeName="stroke-dashoffset" values="200;0;200" dur="4s" repeatCount="indefinite"/>
+            </rect>
+            <circle cx="50" cy="50" r="15" fill="rgba(255, 107, 53, 0.2)" class="svg-dot">
+              <animate attributeName="r" values="15;20;15" dur="2s" repeatCount="indefinite"/>
+            </circle>
+          </svg>
+        </div>
+
+        <div class="experience-item">
+          <div class="experience-header">
+            <div class="experience-icon">
+              <i class="fas fa-globe"></i>
+            </div>
+            <div class="experience-info">
+              <h3 class="experience-title">Full Stack Web Developer Intern</h3>
+              <div class="experience-company">CyberCycloid</div>
+              <div class="experience-location">Indore, India</div>
+              <div class="experience-duration">July 2021 – Sept 2021</div>
+            </div>
+          </div>
+          <div class="experience-content">
+            <ul class="experience-achievements">
+              <li>Developed an e-commerce website, managing end-to-end development, including backend logic and database optimization.</li>
+              <li>Built multiple websites using Django, ensuring efficient database management and optimal performance.</li>
+            </ul>
+            <div class="experience-tech">
+              <span class="tech-badge">Django</span>
+              <span class="tech-badge">E-commerce</span>
+              <span class="tech-badge">Database</span>
+            </div>
+          </div>
+          <!-- SVG Animation for Web Developer -->
+          <svg class="experience-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="50,20 80,35 80,65 50,80 20,65 20,35" fill="none" stroke="rgba(0, 255, 136, 0.1)" stroke-width="2"/>
+            <polygon points="50,20 80,35 80,65 50,80 20,65 20,35" fill="none" stroke="rgba(0, 255, 136, 0.3)" stroke-width="2" stroke-dasharray="240" stroke-dashoffset="240" class="svg-hex">
+              <animate attributeName="stroke-dashoffset" values="240;0;240" dur="5s" repeatCount="indefinite"/>
+            </polygon>
+            <circle cx="50" cy="50" r="8" fill="rgba(0, 255, 136, 0.4)" class="svg-center">
+              <animate attributeName="opacity" values="0.4;1;0.4" dur="1.5s" repeatCount="indefinite"/>
+            </circle>
+          </svg>
         </div>
       </div>
     </div>
@@ -494,7 +617,7 @@
           </div>
         </li>
         <li class="research-item">
-          <div class="research-icon">🩸💻🌐</div>
+          <div class="research-icon">💻</div>
           <div class="research-content">
             <h3 class="research-title">
               Efficient Blood Availability for Targeted Individuals Through Cloud Computing Web Application
@@ -527,13 +650,13 @@
         </div>
         
         <div class="contact-links">
-          <a href="https://www.linkedin.com/in/pratham16121/" class="contact-link linkedin" target="_blank" rel="noopener">
+          <a href="https://www.linkedin.com/in/prathamgoel16121/" class="contact-link linkedin" target="_blank" rel="noopener">
             <div class="contact-icon">
               <i class="fab fa-linkedin"></i>
             </div>
             <div class="contact-info">
               <span class="contact-label">LinkedIn</span>
-              <span class="contact-value">pratham16121</span>
+              <span class="contact-value">prathamgoel16121</span>
             </div>
           </a>
           
