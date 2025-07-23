@@ -1380,6 +1380,39 @@ section {
     order: -1;
   }
   
+  .workspace-3d {
+    display: none;
+  }
+  
+  /* Add coffee mug SVG for tablet */
+  .hero-section::after {
+    content: '';
+    position: absolute;
+    top: 15%;
+    right: 15%;
+    width: 50px;
+    height: 50px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='rgba(255, 193, 7, 0.15)'%3E%3Cpath d='M20 3H4v10c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2c1.11 0 2-.89 2-2V5c0-1.11-.89-2-2-2zM20 8h-2V5h2v3zM4 19h16v2H4z'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.25;
+    animation: float 7s ease-in-out infinite;
+  }
+  
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    bottom: 25%;
+    left: 10%;
+    width: 35px;
+    height: 35px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='rgba(0, 255, 136, 0.1)'%3E%3Cpath d='M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    animation: float 9s ease-in-out infinite reverse;
+  }
+  
   .about-content {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -1387,10 +1420,6 @@ section {
   
   .skills-grid {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
-  
-  .workspace-3d {
-    transform: scale(0.8);
   }
   
   .title-name {
@@ -1483,22 +1512,57 @@ section {
   
   /* 3D Workspace Mobile */
   .workspace-3d {
-    transform: scale(0.6);
-    margin: 0 auto;
-  }
-  
-  .monitor-screen {
-    width: 200px;
-    height: 130px;
-  }
-  
-  .laptop-screen {
-    width: 180px;
-    height: 110px;
-  }
-  
-  .floating-code {
     display: none;
+  }
+  
+  /* Add subtle SVG elements for mobile */
+  .hero-section::after {
+    content: '';
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    width: 40px;
+    height: 40px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='rgba(0, 212, 255, 0.1)'%3E%3Cpath d='M2 21h18v-2H2v2zm6-4h12v-2H8v2zm-6-4h18v-2H2v2zm6-4h12V7H8v2z'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    animation: float 6s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    bottom: 30%;
+    left: 5%;
+    width: 30px;
+    height: 30px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='rgba(255, 107, 53, 0.1)'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    animation: float 8s ease-in-out infinite reverse;
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  /* Add coffee mug SVG for mobile */
+  .hero-section .hero-content::after {
+    content: '';
+    position: absolute;
+    top: 60%;
+    right: 5%;
+    width: 25px;
+    height: 25px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='rgba(255, 193, 7, 0.1)'%3E%3Cpath d='M20 3H4v10c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2c1.11 0 2-.89 2-2V5c0-1.11-.89-2-2-2zM20 8h-2V5h2v3zM4 19h16v2H4z'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.15;
+    animation: float 10s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 1;
   }
   
   /* Sections Mobile */
@@ -1695,21 +1759,57 @@ section {
   
   /* 3D Workspace Extra Small */
   .workspace-3d {
-    transform: scale(0.5);
-  }
-  
-  .monitor-screen {
-    width: 150px;
-    height: 100px;
-  }
-  
-  .laptop-screen {
-    width: 130px;
-    height: 80px;
-  }
-  
-  .coffee-cup {
     display: none;
+  }
+  
+  /* Add more SVG elements for extra small screens */
+  .hero-section .hero-content::before {
+    content: '';
+    position: absolute;
+    top: 40%;
+    left: 2%;
+    width: 20px;
+    height: 20px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='rgba(156, 39, 176, 0.1)'%3E%3Cpath d='M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    animation: float 12s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    bottom: 30%;
+    left: 5%;
+    width: 30px;
+    height: 30px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='rgba(255, 107, 53, 0.1)'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    animation: float 8s ease-in-out infinite reverse;
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  /* Add coffee mug SVG for mobile */
+  .hero-section .hero-content::after {
+    content: '';
+    position: absolute;
+    top: 60%;
+    right: 5%;
+    width: 25px;
+    height: 25px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='rgba(255, 193, 7, 0.1)'%3E%3Cpath d='M20 3H4v10c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2c1.11 0 2-.89 2-2V5c0-1.11-.89-2-2-2zM20 8h-2V5h2v3zM4 19h16v2H4z'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.15;
+    animation: float 10s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 1;
   }
   
   /* Sections Extra Small */
@@ -1884,7 +1984,7 @@ section {
   }
   
   .workspace-3d {
-    transform: scale(0.4);
+    display: none;
   }
   
   .title-name {
