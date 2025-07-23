@@ -1424,6 +1424,7 @@ section {
   
   .title-name {
     font-size: 3rem;
+    padding-top: 40px;
   }
   
   .section-title {
@@ -1487,7 +1488,7 @@ section {
   
   .title-name {
     font-size: 2.5rem;
-    padding-top: 20px;
+    padding-top: 40px;
   }
   
   .title-role {
@@ -1745,8 +1746,8 @@ section {
   }
   
   .title-name {
-    font-size: 2rem;
-    padding-top: 10px;
+    font-size: 1.75rem;
+    padding-top: 40px;
   }
   
   .title-role {
@@ -1989,7 +1990,7 @@ section {
   
   .title-name {
     font-size: 1.5rem;
-    padding-top: 0;
+    padding-top: 40px;
   }
   
   .title-role {
