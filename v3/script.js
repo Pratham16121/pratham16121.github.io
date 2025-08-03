@@ -11,12 +11,12 @@ class PortfolioAnimations {
     this.setupScrollAnimations();
     this.setupWorkspace3D();
     this.setupParallaxEffects();
-    this.setupFloatingElements();
     this.setupTypingAnimation();
     this.setupCounterAnimations();
     this.setupProjectCards();
     this.setupSkillCategories();
     this.setupSmoothScrolling();
+    this.setupFloatingElements();
   }
 
   // Loading Screen with Faster Terminal Animation
@@ -166,9 +166,25 @@ class PortfolioAnimations {
       });
     }, observerOptions);
 
-    // Observe all animated elements
-    const animatedElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .scale-in, .experience-item, .project-card, .research-card');
-    animatedElements.forEach(el => observer.observe(el));
+    // Add animation classes to elements
+    const animatedElements = document.querySelectorAll('.section, .skill-category, .project-card, .research-item, .stat-item');
+    animatedElements.forEach((el, index) => {
+      el.classList.add('fade-in');
+      el.style.animationDelay = `${index * 0.1}s`;
+      observer.observe(el);
+    });
+
+    // Staggered animations for skills
+    const skillCategories = document.querySelectorAll('.skill-category');
+    skillCategories.forEach((category, index) => {
+      category.style.animationDelay = `${index * 0.2}s`;
+    });
+
+    // Staggered animations for projects
+    const projectCards = document.querySelectorAll('.project-card');
+    projectCards.forEach((card, index) => {
+      card.style.animationDelay = `${index * 0.15}s`;
+    });
   }
 
   // 3D Workspace Interactions
@@ -176,8 +192,28 @@ class PortfolioAnimations {
     const workspace = document.getElementById('workspace3d');
     if (!workspace) return;
 
+    let mouseX = 0;
+    let mouseY = 0;
     let isHovering = false;
-    let animationId;
+
+    // Mouse move effect
+    workspace.addEventListener('mousemove', (e) => {
+      if (!isHovering) return;
+      
+      const rect = workspace.getBoundingClientRect();
+      mouseX = (e.clientX - rect.left - rect.width / 2) / rect.width;
+      mouseY = (e.clientY - rect.top - rect.height / 2) / rect.height;
+
+      const rotateX = mouseY * 10;
+      const rotateY = mouseX * 10;
+
+      workspace.style.transform = `
+        perspective(1000px) 
+        rotateX(${rotateX}deg) 
+        rotateY(${rotateY}deg) 
+        translateZ(20px)
+      `;
+    });
 
     workspace.addEventListener('mouseenter', () => {
       isHovering = true;
@@ -185,71 +221,43 @@ class PortfolioAnimations {
 
     workspace.addEventListener('mouseleave', () => {
       isHovering = false;
+      workspace.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateZ(0px)';
     });
 
-    workspace.addEventListener('mousemove', (e) => {
-      if (!isHovering) return;
-
-      const rect = workspace.getBoundingClientRect();
-      const mouseX = (e.clientX - rect.left - rect.width / 2) / rect.width;
-      const mouseY = (e.clientY - rect.top - rect.height / 2) / rect.height;
-      
-      const rotateX = mouseY * 15;
-      const rotateY = mouseX * 15;
-      
-      workspace.style.transform = `
-        perspective(1000px) 
-        rotateX(${rotateX}deg) 
-        rotateY(${rotateY}deg) 
-        translateZ(30px)
-        scale(1.05)
-      `;
+    // Monitor glow effect with cyberpunk colors
+    const monitors = document.querySelectorAll('.monitor');
+    monitors.forEach((monitor, index) => {
+      setInterval(() => {
+        const glowIntensity = 10 + Math.random() * 15;
+        const glowColor = `rgba(0, 212, 255, ${0.3 + Math.random() * 0.4})`;
+        monitor.style.filter = `drop-shadow(0 0 ${glowIntensity}px ${glowColor})`;
+      }, 2000 + index * 1000);
     });
 
-    // Add floating animation
-    const animate = () => {
-      const time = Date.now() * 0.001;
-      const floatY = Math.sin(time) * 10;
-      
-      if (!isHovering) {
-        workspace.style.transform = `
-          perspective(1000px) 
-          translateY(${floatY}px)
-          scale(1)
-        `;
-      }
-      
-      animationId = requestAnimationFrame(animate);
-    };
-    
-    animate();
-
-    // Cleanup animation on page unload
-    window.addEventListener('beforeunload', () => {
-      if (animationId) {
-        cancelAnimationFrame(animationId);
-      }
-    });
+    // Code editor typing effect
+    this.setupCodeTyping();
   }
 
   setupCodeTyping() {
     const codeLines = document.querySelectorAll('.code-line');
-    if (!codeLines.length) return;
+    if (codeLines.length === 0) return;
 
     codeLines.forEach((line, index) => {
       const originalText = line.innerHTML;
       line.innerHTML = '';
-      
+      line.style.opacity = '0';
+
       setTimeout(() => {
+        line.style.opacity = '1';
         this.typeCode(line, originalText, 0);
-      }, index * 1000);
+      }, index * 300); // Faster typing
     });
   }
 
   typeCode(element, text, index) {
     if (index < text.length) {
       element.innerHTML += text[index];
-      setTimeout(() => this.typeCode(element, text, index + 1), 50);
+      setTimeout(() => this.typeCode(element, text, index + 1), 30); // Faster character typing
     }
   }
 
