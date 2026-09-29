@@ -1,3 +1,123 @@
 # Pratham Goel
-## Yotube Link: https://www.youtube.com/@pratham_goel
-## LinkedIn: https://www.linkedin.com/in/prathamgoel16121/
+
+> Pratham Goel is a Software Engineer and Full Stack Developer in Pune, India. He builds scalable full-stack systems with Python, Ruby on Rails, React, and JavaScript, and applies Machine Learning, C++, and system architecture to production platforms used by hundreds of thousands of learners.
+
+## Contact
+
+- **Email:** [pratham.goel16@gmail.com](mailto:pratham.goel16@gmail.com)
+- **Phone:** +91 7415198663
+- **LinkedIn:** [linkedin.com/in/prathamgoel16121](https://www.linkedin.com/in/prathamgoel16121/)
+- **GitHub:** [github.com/prathamgoel16121](https://github.com/prathamgoel16121)
+- **YouTube:** [youtube.com/@pratham_goel](https://www.youtube.com/@pratham_goel)
+- **Portfolio:** [prathamgoel.github.io](https://prathamgoel.github.io/)
+
+## Summary
+
+Software Engineer with production experience in full-stack development, SCORM learning platforms, Model Context Protocol (MCP) integrations, and cloud-native system architecture. Works across Python, Ruby on Rails, FastAPI, React, and JavaScript, with Machine Learning research published in IEEE and Springer.
+
+## Experience
+
+### Software Engineer
+
+**MangoApps India Pvt. Ltd.** — Pune, India  
+June 2023 – Present
+
+#### MangoScorm
+
+- Designed and developed MangoScorm, a scalable SCORM-compliant learning platform that replaced a third-party solution, saving $500K+ in licensing costs while supporting 300K+ learners.
+- Engineered the SCORM runtime engine for SCORM 1.2 and SCORM 2004, including learner progress tracking, bookmarking, scoring, completion workflows, and resume states.
+- Architected backend services with FastAPI, MySQL, Redis, and Docker, delivering scalable APIs for a multi-tenant learning environment with asynchronous request handling and distributed session management.
+- Established a cloud-native deployment architecture using Docker, Git-based workflows, CI/CD pipelines, and cloud services including Google Cloud Run, Cloud SQL, Cloud Storage, AWS EC2, and AWS S3.
+- Led the migration from Rustici SCORM Cloud, preserving 100% of learner progress, completion records, scores, and resume states through automated migration and data transformation pipelines.
+
+#### Model Context Protocol for MangoApps
+
+- Created an MCP server to securely expose MangoApps data and services to AI assistants and LLM-powered applications.
+- Delivered 17 MCP tools so AI agents can retrieve enterprise knowledge, execute workflows, and interact with MangoApps APIs through standardized interfaces.
+- Integrated authentication and authorization that enforce tenant-isolated access and protect enterprise data.
+
+#### AI Studio
+
+- Developed the admin portal and chatbot interface with Ruby on Rails, React, and JavaScript, including 20+ configurable AI settings for enterprise administrators to manage AI providers, models, prompts, and platform preferences.
+- Integrated backend APIs and business logic for AI configuration management and connectivity with external AI service providers.
+- Architected analytics and token-based billing workflows that process AI usage metrics, track consumption, and generate usage and cost reports.
+
+#### Additional delivery
+
+- Delivered 10+ production features across Ruby on Rails, Python, React, and JavaScript, designing scalable services, APIs, and distributed workflows.
+
+### Ruby on Rails Developer Intern
+
+**Josh Software Pvt. Ltd.** — Pune, India  
+July 2022 – January 2023
+
+- Contributed to Sparkode, Josh Software’s in-house recruitment and assessment platform, delivering 15+ full-stack features with Ruby on Rails, React, JavaScript, and REST APIs across candidate assessments, recruiter workflows, and platform management.
+- Engineered 5+ reusable UI components, REST APIs, and database models, improving code reusability and maintainability across modules.
+- Collaborated with senior engineers in an Agile environment on code reviews, production releases, testing, debugging, and SDLC practices.
+
+### Full Stack Web Developer Intern
+
+**CyberCycloid** — Indore, India  
+July 2021 – September 2021
+
+- Built a full e-commerce platform with Django and MySQL, including backend business logic, REST APIs, authentication workflows, database schemas, and ORM-based models.
+
+## Publications
+
+### Efficient Blood Availability through Cloud Computing Web Application
+
+- **Venue:** IEEE
+- **Date:** October 2023
+- **Focus:** Cloud-based Ruby on Rails architecture for real-time critical inventory tracking
+- **DOI:** [10.1109/ETNCC59188.2023.10284940](https://doi.org/10.1109/ETNCC59188.2023.10284940)
+
+### Telecommunication Stocks Prediction Using LSTM
+
+- **Venue:** Springer
+- **Date:** January 2023
+- **Focus:** Stock forecasting using LSTM neural networks with comparative Machine Learning benchmarking
+- **DOI:** [10.1007/978-3-031-21750-0_26](https://doi.org/10.1007/978-3-031-21750-0_26)
+
+## Projects
+
+### Parking Lot Management System
+
+- **Stack:** Ruby on Rails, JavaScript, MySQL
+- Created a scalable parking management system with real-time slot tracking and a modular MySQL data model designed for performance and maintainability.
+
+### Sudoku Game with Solver
+
+- **Stack:** Python, NumPy, PyGame
+- Implemented an interactive Sudoku game with a backtracking solver that generates and validates puzzles across difficulty levels.
+
+### Snake Game
+
+- **Stack:** Python, PyGame
+- Built a classic Snake game with real-time keyboard controls, collision detection, game-state management, and dynamic score tracking.
+
+## Technologies
+
+- **Languages:** Python, Ruby, JavaScript, C++, Java
+- **Frameworks:** FastAPI, Django, Ruby on Rails, React
+- **Databases and ORM:** MySQL, Redis, SQLAlchemy, ActiveRecord
+- **APIs and architecture:** REST APIs, Model Context Protocol (MCP), microservices, distributed systems, system architecture
+- **Cloud and DevOps:** AWS (EC2, S3), Google Cloud (Cloud Run, Cloud SQL, Cloud Storage), Docker, CI/CD, Git, Linux
+- **Tools:** GitHub, Postman, monitoring, Agile, Scrum
+- **Concepts:** data structures, algorithms, object-oriented programming, system design, networking (TCP/IP), Machine Learning
+
+## Education
+
+### M.Tech in Software Engineering
+
+**BITS Pilani** — Executive / Work-Integrated Learning Programme for Working Professionals  
+January 2025 – Present
+
+### B.Tech in Computer Science
+
+**Symbiosis University of Applied Sciences**  
+August 2019 – May 2023  
+**CGPA:** 8.87 / 10
+
+## Keywords
+
+Pratham Goel, Software Engineer, Full Stack Developer, Full-Stack Web Developer, Machine Learning, Python, Ruby on Rails, C++, JavaScript, React, FastAPI, Django, SCORM, Model Context Protocol, MCP, system architecture, cloud computing, AWS, Google Cloud, MySQL, Redis, Docker
