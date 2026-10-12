@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="google-site-verification" content="rsbvnDUVkq6R7E-jqfYnkYXwtNOBism7iX92ByU8p7k" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pratham Goel - Software Engineer & Developer</title>
+  <meta name="description" content="Pratham Goel is a passionate software engineer with expertise in full-stack development, machine learning, and system architecture. View portfolio, projects, and research.">
+  <meta name="keywords" content="Pratham Goel, Software Engineer, Full Stack Developer, Machine Learning, Python, Ruby on Rails, C++">
+  <meta name="author" content="Pratham Goel">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://prathamgoel.github.io/">
+  <meta property="og:title" content="Pratham Goel - Software Engineer & Developer">
+  <meta property="og:description" content="Passionate software engineer with expertise in full-stack development, machine learning, and system architecture.">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://prathamgoel.github.io/">
+  <meta property="twitter:title" content="Pratham Goel - Software Engineer & Developer">
+  <meta property="twitter:description" content="Passionate software engineer with expertise in full-stack development, machine learning, and system architecture.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div class="loading-screen" id="loadingScreen">
+    <div class="loading-content">
+      <div class="terminal-window">
+        <div class="terminal-header">
+          <div class="terminal-buttons">
+            <span class="terminal-btn close"></span>
+            <span class="terminal-btn minimize"></span>
+            <span class="terminal-btn maximize"></span>
+          </div>
+          <span class="terminal-title">Loading Portfolio...</span>
+        </div>
+        <div class="terminal-body">
+          <div class="typing-text" id="typingText"></div>
+          <span class="cursor">|</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-icon">👨‍💻</span>
+        <span class="logo-text">Pratham Goel</span>
+      </div>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#research" class="nav-link">Research</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-toggle" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section with 3D Workspace -->
+  <section id="home" class="hero-section">
+    <div class="hero-background">
+      <div class="grid-overlay"></div>
+      <div class="floating-elements">
+        <div class="floating-code" data-speed="0.5">const developer = { passion: 'coding' };</div>
+        <div class="floating-code" data-speed="0.3">function createAmazing() { return 'portfolio'; }</div>
+        <div class="floating-code" data-speed="0.7">npm install creativity</div>
+        <div class="floating-code" data-speed="0.4">git commit -m "Build amazing things"</div>
+        <div class="floating-code" data-speed="0.6">sudo make me a sandwich</div>
+      </div>
+    </div>
+    
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">
+          <span class="title-line">Hello, I'm</span>
+          <span class="title-name">Pratham Goel</span>
+          <span class="title-role">Software Engineer & Full-Stack Developer</span>
+        </h1>
+        <p class="hero-subtitle">
+          Passionate about building scalable solutions, leveraging machine learning, and creating impactful software that solves real-world problems
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">
+            <i class="fas fa-code"></i>
+            View Projects
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            <i class="fas fa-envelope"></i>
+            Get In Touch
+          </a>
+        </div>
+      </div>
+      
+      <div class="hero-workspace">
+        <div class="workspace-3d" id="workspace3d">
+          <!-- Main Monitor -->
+          <div class="monitor main-monitor">
+            <div class="monitor-screen">
+              <div class="code-editor">
+                <div class="editor-header">
+                  <div class="file-tabs">
+                    <span class="file-tab active">portfolio.js</span>
+                    <span class="file-tab">styles.css</span>
+                    <span class="file-tab">index.html</span>
+                  </div>
+                </div>
+                <div class="code-content">
+                  <div class="line-numbers">
+                    <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span>
+                  </div>
+                  <div class="code-lines">
+                    <div class="code-line"><span class="keyword">const</span> <span class="variable">developer</span> = {</div>
+                    <div class="code-line">  <span class="property">name</span>: <span class="string">'Pratham Goel'</span>,</div>
+                    <div class="code-line">  <span class="property">skills</span>: [<span class="string">'JavaScript'</span>, <span class="string">'Python'</span>],</div>
+                    <div class="code-line">  <span class="property">passion</span>: <span class="string">'Building amazing things'</span>,</div>
+                    <div class="code-line">  <span class="property">status</span>: <span class="string">'Always learning'</span></div>
+                    <div class="code-line">};</div>
+                    <div class="code-line"><span class="keyword">console</span>.<span class="variable">log</span>(<span class="string">'Ready to code!'</span>);</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="monitor-stand"></div>
+          </div>
+          
+          <!-- Secondary Monitor -->
+          <div class="monitor secondary-monitor">
+            <div class="monitor-screen">
+              <div class="terminal-window">
+                <div class="terminal-header">
+                  <div class="terminal-buttons">
+                    <span class="terminal-btn close"></span>
+                    <span class="terminal-btn minimize"></span>
+                    <span class="terminal-btn maximize"></span>
+                  </div>
+                  <span class="terminal-title">Terminal</span>
+                </div>
+                <div class="terminal-body">
+                  <div class="terminal-line">$ npm start</div>
+                  <div class="terminal-line">🚀 Server running on port 3000</div>
+                  <div class="terminal-line">✨ Portfolio loaded successfully</div>
+                  <div class="terminal-line">📊 Performance: 99.9%</div>
+                  <div class="terminal-line">$ <span class="cursor">|</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="monitor-stand"></div>
+          </div>
+          
+          <!-- Laptop -->
+          <div class="laptop">
+            <div class="laptop-screen">
+              <div class="file-explorer">
+                <div class="explorer-header">
+                  <i class="fas fa-folder"></i>
+                  <span>Projects</span>
+                </div>
+                <div class="explorer-content">
+                  <div class="file-item"><i class="fas fa-file-code"></i> parking-lot/</div>
+                  <div class="file-item"><i class="fas fa-file-code"></i> sudoku-game/</div>
+                  <div class="file-item"><i class="fas fa-file-code"></i> racing-game/</div>
+                  <div class="file-item"><i class="fas fa-file-code"></i> portfolio/</div>
+                  <div class="file-item"><i class="fas fa-file-code"></i> ml-research/</div>
+                </div>
+              </div>
+            </div>
+            <div class="laptop-base"></div>
+          </div>
+          
+          <!-- Coffee Cup -->
+          <div class="coffee-cup">
+            <div class="cup"></div>
+            <div class="steam"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="scroll-indicator">
+      <div class="scroll-arrow"></div>
+      <span>Scroll to explore</span>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="title-icon">👨‍💻</span>
+          About Me
+        </h2>
+        <div class="title-line"></div>
+      </div>
+      
+      <div class="about-content">
+        <div class="about-text">
+          <p class="about-paragraph">
+            I am a dedicated software engineer with a strong foundation in computer science and a passion for innovative problem-solving. My expertise spans full-stack development, machine learning applications, and system architecture design. I thrive in collaborative environments where I can contribute to building robust, scalable solutions that address complex technical challenges.
+          </p>
+          <p class="about-paragraph">
+            With experience across multiple programming paradigms and technologies, I bring a comprehensive approach to software development. My work demonstrates proficiency in both front-end and back-end technologies, database management, and algorithmic problem-solving. I am committed to continuous learning and staying current with emerging technologies and industry best practices.
+          </p>
+        </div>
+        
+        <div class="about-stats">
+          <div class="stat-item">
+            <div class="stat-number" data-target="2">0</div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="15">0</div>
+            <div class="stat-label">Projects Completed</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="2">0</div>
+            <div class="stat-label">Research Papers</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="experience-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="title-icon">💼</span>
+          Professional Experience
+        </h2>
+        <div class="title-line"></div>
+      </div>
+      
+      <div class="experience-timeline">
+        <div class="experience-item" data-section="software-engineer">
+          <div class="experience-header">
+            <div class="experience-icon">
+              <i class="fas fa-code"></i>
+            </div>
+            <div class="experience-info">
+              <h3 class="experience-title">Software Engineer</h3>
+              <div class="experience-company">MangoApps India Pvt. Ltd.</div>
+              <div class="experience-location">Pune, India</div>
+              <div class="experience-duration">June 2024 – Present</div>
+            </div>
+          </div>
+          <div class="experience-content">
+            <ul class="experience-achievements">
+              <li>Implemented 10+ Product Features using Ruby on Rails for backend and React, JavaScript, HTML, and CSS for frontend, ensuring a seamless user experience.</li>
+              <li>Improved existing product features by optimizing database queries, refactoring code, and enhancing UI/UX to boost performance and user engagement.</li>
+              <li>Contributed to the development of AI Studio, now live for customers, enhancing AI-powered workflows.</li>
+            </ul>
+            <div class="experience-tech">
+              <span class="tech-badge">Ruby on Rails</span>
+              <span class="tech-badge">React</span>
+              <span class="tech-badge">JavaScript</span>
+              <span class="tech-badge">AI/ML</span>
+            </div>
+          </div>
+          <!-- SVG Animation for Software Engineer -->
+          <svg class="experience-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="45" fill="none" stroke="rgba(0, 212, 255, 0.1)" stroke-width="2"/>
+            <circle cx="50" cy="50" r="45" fill="none" stroke="rgba(0, 212, 255, 0.3)" stroke-width="2" stroke-dasharray="283" stroke-dashoffset="283" class="svg-circle">
+              <animate attributeName="stroke-dashoffset" values="283;0;283" dur="3s" repeatCount="indefinite"/>
+            </circle>
+            <path d="M30 50 L45 65 L70 35" stroke="rgba(0, 212, 255, 0.8)" stroke-width="3" fill="none" class="svg-check">
+              <animate attributeName="stroke-dasharray" values="0,50;50,0" dur="2s" repeatCount="indefinite"/>
+            </path>
+          </svg>
+        </div>
+
+        <div class="experience-item" data-section="rails-developer">
+          <div class="experience-header">
+            <div class="experience-icon">
+              <i class="fab fa-ruby"></i>
+            </div>
+            <div class="experience-info">
+              <h3 class="experience-title">Ruby on Rails Developer Intern</h3>
+              <div class="experience-company">Josh Software Pvt. Ltd.</div>
+              <div class="experience-location">Pune, India</div>
+              <div class="experience-duration">July 2022 – Jan 2024</div>
+            </div>
+          </div>
+          <div class="experience-content">
+            <ul class="experience-achievements">
+              <li>Learned Ruby on Rails through hands-on learning and senior developer mentorship, contributing to multiple projects.</li>
+              <li>Resolved bugs in applications, enhancing functionality and user experience.</li>
+            </ul>
+            <div class="experience-tech">
+              <span class="tech-badge">Ruby on Rails</span>
+              <span class="tech-badge">Mentorship</span>
+              <span class="tech-badge">Bug Fixing</span>
+            </div>
+          </div>
+          <!-- SVG Animation for Rails Developer -->
+          <svg class="experience-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <rect x="25" y="25" width="50" height="50" fill="none" stroke="rgba(255, 107, 53, 0.1)" stroke-width="2"/>
+            <rect x="25" y="25" width="50" height="50" fill="none" stroke="rgba(255, 107, 53, 0.3)" stroke-width="2" stroke-dasharray="200" stroke-dashoffset="200" class="svg-rect">
+              <animate attributeName="stroke-dashoffset" values="200;0;200" dur="4s" repeatCount="indefinite"/>
+            </rect>
+            <circle cx="50" cy="50" r="15" fill="rgba(255, 107, 53, 0.2)" class="svg-dot">
+              <animate attributeName="r" values="15;20;15" dur="2s" repeatCount="indefinite"/>
+            </circle>
+          </svg>
+        </div>
+
+        <div class="experience-item" data-section="web-developer">
+          <div class="experience-header">
+            <div class="experience-icon">
+              <i class="fas fa-globe"></i>
+            </div>
+            <div class="experience-info">
+              <h3 class="experience-title">Full Stack Web Developer Intern</h3>
+              <div class="experience-company">CyberCycloid</div>
+              <div class="experience-location">Indore, India</div>
+              <div class="experience-duration">July 2021 – Sept 2021</div>
+            </div>
+          </div>
+          <div class="experience-content">
+            <ul class="experience-achievements">
+              <li>Developed an e-commerce website, managing end-to-end development, including backend logic and database optimization.</li>
+              <li>Built multiple websites using Django, ensuring efficient database management and optimal performance.</li>
+            </ul>
+            <div class="experience-tech">
+              <span class="tech-badge">Django</span>
+              <span class="tech-badge">E-commerce</span>
+              <span class="tech-badge">Database</span>
+            </div>
+          </div>
+          <!-- SVG Animation for Web Developer -->
+          <svg class="experience-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="50,20 80,35 80,65 50,80 20,65 20,35" fill="none" stroke="rgba(0, 255, 136, 0.1)" stroke-width="2"/>
+            <polygon points="50,20 80,35 80,65 50,80 20,65 20,35" fill="none" stroke="rgba(0, 255, 136, 0.3)" stroke-width="2" stroke-dasharray="240" stroke-dashoffset="240" class="svg-hex">
+              <animate attributeName="stroke-dashoffset" values="240;0;240" dur="5s" repeatCount="indefinite"/>
+            </polygon>
+            <circle cx="50" cy="50" r="8" fill="rgba(0, 255, 136, 0.4)" class="svg-center">
+              <animate attributeName="opacity" values="0.4;1;0.4" dur="1.5s" repeatCount="indefinite"/>
+            </circle>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="title-icon">⚡</span>
+          Technical Expertise
+        </h2>
+        <div class="title-line"></div>
+      </div>
+      
+      <div class="skills-grid">
+        <div class="skill-category" data-category="backend">
+          <div class="category-header">
+            <i class="fas fa-server"></i>
+            <h4>Backend Development</h4>
+          </div>
+          <ul class="skill-list">
+            <li><span class="skill-tag"><i class="fab fa-ruby"></i> Ruby on Rails</span></li>
+            <li><span class="skill-tag"><i class="fab fa-python"></i> Python</span></li>
+            <li><span class="skill-tag"><i class="fas fa-code"></i> Django</span></li>
+            <li><span class="skill-tag"><i class="fas fa-copyright"></i> C++</span></li>
+          </ul>
+        </div>
+        
+        <div class="skill-category" data-category="frontend">
+          <div class="category-header">
+            <i class="fas fa-palette"></i>
+            <h4>Frontend & Web</h4>
+          </div>
+          <ul class="skill-list">
+            <li><span class="skill-tag"><i class="fab fa-js-square"></i> JavaScript</span></li>
+            <li><span class="skill-tag"><i class="fab fa-html5"></i> HTML/CSS</span></li>
+            <li><span class="skill-tag"><i class="fas fa-globe"></i> Web Development</span></li>
+            <li><span class="skill-tag"><i class="fas fa-mobile-alt"></i> Responsive Design</span></li>
+          </ul>
+        </div>
+        
+        <div class="skill-category" data-category="data">
+          <div class="category-header">
+            <i class="fas fa-database"></i>
+            <h4>Data & Analytics</h4>
+          </div>
+          <ul class="skill-list">
+            <li><span class="skill-tag"><i class="fas fa-database"></i> MySQL</span></li>
+            <li><span class="skill-tag"><i class="fas fa-chart-bar"></i> Data Analysis</span></li>
+            <li><span class="skill-tag"><i class="fas fa-brain"></i> Machine Learning</span></li>
+            <li><span class="skill-tag"><i class="fas fa-calculator"></i> NumPy</span></li>
+          </ul>
+        </div>
+        
+        <div class="skill-category" data-category="tools">
+          <div class="category-header">
+            <i class="fas fa-tools"></i>
+            <h4>Development Tools</h4>
+          </div>
+          <ul class="skill-list">
+            <li><span class="skill-tag"><i class="fab fa-git-alt"></i> Git</span></li>
+            <li><span class="skill-tag"><i class="fab fa-github"></i> GitHub</span></li>
+            <li><span class="skill-tag"><i class="fas fa-code-branch"></i> Version Control</span></li>
+            <li><span class="skill-tag"><i class="fas fa-users"></i> Agile Methodologies</span></li>
+          </ul>
+        </div>
+        
+        <div class="skill-category" data-category="core">
+          <div class="category-header">
+            <i class="fas fa-cogs"></i>
+            <h4>Core Competencies</h4>
+          </div>
+          <ul class="skill-list">
+            <li><span class="skill-tag"><i class="fas fa-sitemap"></i> Data Structures</span></li>
+            <li><span class="skill-tag"><i class="fas fa-project-diagram"></i> Algorithms</span></li>
+            <li><span class="skill-tag"><i class="fas fa-archway"></i> System Design</span></li>
+            <li><span class="skill-tag"><i class="fas fa-lightbulb"></i> Problem Solving</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="title-icon">🚀</span>
+          Featured Projects
+        </h2>
+        <div class="title-line"></div>
+      </div>
+      
+      <div class="projects-grid">
+        <article class="project-card" data-project="parking">
+          <div class="project-image">
+            🅿️
+          </div>
+          <div class="project-content">
+            <div class="project-header">
+              <span class="project-icon">🅿️</span>
+              <div>
+                <h3 class="project-title">Parking Lot Management System</h3>
+                <p class="project-date">March 2023</p>
+              </div>
+            </div>
+            <p class="project-description">
+              Developed a comprehensive parking management solution using Ruby on Rails framework. The system efficiently handles vehicle entry/exit operations, implements intelligent parking space allocation algorithms, and generates detailed transaction reports. Features include real-time space availability tracking, automated ticket generation, and administrative dashboard for oversight.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Ruby on Rails</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/pratham16121/parking_lot" class="project-link" target="_blank" rel="noopener">
+                <i class="fab fa-github"></i>
+                View Repository
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-project="student">
+          <div class="project-image">
+            📊
+          </div>
+          <div class="project-content">
+            <div class="project-header">
+              <span class="project-icon">📊</span>
+              <div>
+                <h3 class="project-title">Student Result Processing System</h3>
+                <p class="project-date">May 2021</p>
+              </div>
+            </div>
+            <p class="project-description">
+              Engineered a comprehensive student database management system using Python and MySQL. The application captures and processes student academic data, generates analytical reports using matplotlib for data visualization, and provides management oversight capabilities. Implements secure data handling and automated report generation for educational institutions.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">Matplotlib</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-project="sudoku">
+          <div class="project-image">
+            🎲
+          </div>
+          <div class="project-content">
+            <div class="project-header">
+              <span class="project-icon">🎲</span>
+              <div>
+                <h3 class="project-title">Advanced Sudoku Game Engine</h3>
+                <p class="project-date">December 2020</p>
+              </div>
+            </div>
+            <p class="project-description">
+              Developed a sophisticated Sudoku game with dynamic difficulty levels and intelligent puzzle generation. Features include timer-based gameplay, multiple difficulty settings, and an advanced solver algorithm capable of generating all possible solutions. Built using Python with NumPy for mathematical operations and PyGame for user interface.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">NumPy</span>
+              <span class="tech-tag">PyGame</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-project="adventure">
+          <div class="project-image">
+            🎮
+          </div>
+          <div class="project-content">
+            <div class="project-header">
+              <span class="project-icon">🎮</span>
+              <div>
+                <h3 class="project-title">Text-Based Adventure Game</h3>
+                <p class="project-date">October 2020</p>
+              </div>
+            </div>
+            <p class="project-description">
+              Created an immersive text-based adventure game in C++ demonstrating advanced data structure implementation. The game features dynamic command processing, intelligent clue systems, and complex state management. Showcases object-oriented programming principles and efficient algorithm design for interactive storytelling.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">C++</span>
+              <span class="tech-tag">OOP</span>
+              <span class="tech-tag">Data Structures</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-project="tictactoe">
+          <div class="project-image">
+            ❌⭕
+          </div>
+          <div class="project-content">
+            <div class="project-header">
+              <span class="project-icon">❌⭕</span>
+              <div>
+                <h3 class="project-title">Tic Tac Toe Game Engine</h3>
+                <p class="project-date">August 2020</p>
+              </div>
+            </div>
+            <p class="project-description">
+              Implemented a console-based Tic Tac Toe game with interactive UI and dynamic win condition detection. Features include real-time game state tracking, player turn management, and intelligent move validation. The project demonstrates fundamental programming concepts and user interface design principles.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">C++</span>
+              <span class="tech-tag">Console UI</span>
+              <span class="tech-tag">Game Logic</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Pratham16121/Tic-Tac-Toe" class="project-link" target="_blank" rel="noopener">
+                <i class="fab fa-github"></i>
+                View Repository
+              </a>
+              <a href="https://www.suas.ac.in/game-development-strategies/" class="project-link" target="_blank" rel="noopener">
+                <i class="fas fa-external-link-alt"></i>
+                Webinar Presentation
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-project="racing">
+          <div class="project-image">
+            🚗
+          </div>
+          <div class="project-content">
+            <div class="project-header">
+              <span class="project-icon">🚗</span>
+              <div>
+                <h3 class="project-title">Two Car Racing Game</h3>
+                <p class="project-date">September 2019</p>
+              </div>
+            </div>
+            <p class="project-description">
+              Developed a graphics-intensive car racing game using C++ with advanced obstacle detection and scoring systems. Features include dynamic graphics rendering, collision detection algorithms, and progressive difficulty scaling. Demonstrates proficiency in game development principles and graphics programming.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">C++</span>
+              <span class="tech-tag">Graphics</span>
+              <span class="tech-tag">Game Physics</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/pratham16121/Two-Cars" class="project-link" target="_blank" rel="noopener">
+                <i class="fab fa-github"></i>
+                View Repository
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research Section -->
+  <section id="research" class="research-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="title-icon">📚</span>
+          Research Publications
+        </h2>
+        <div class="title-line"></div>
+      </div>
+      
+      <div class="research-grid">
+        <article class="research-card">
+          <div class="research-image">
+            📈
+          </div>
+          <div class="research-content">
+            <div class="research-header">
+              <span class="research-icon">📈</span>
+              <h3 class="research-title">
+                Telecommunication Stocks Prediction Using Long Short-Term Memory Model Neural Network
+              </h3>
+            </div>
+            <p class="research-description">
+              Published research on implementing LSTM neural networks for financial market prediction, demonstrating advanced machine learning applications in quantitative finance.
+            </p>
+            <a href="https://link.springer.com/chapter/10.1007/978-3-031-21750-0_26" class="research-link" target="_blank" rel="noopener">
+              <i class="fas fa-external-link-alt"></i>
+              View Publication
+            </a>
+          </div>
+        </article>
+        
+        <article class="research-card">
+          <div class="research-image">
+            💻
+          </div>
+          <div class="research-content">
+            <div class="research-header">
+              <span class="research-icon">💻</span>
+              <h3 class="research-title">
+                Efficient Blood Availability for Targeted Individuals Through Cloud Computing Web Application
+              </h3>
+            </div>
+            <p class="research-description">
+              Research on developing cloud-based solutions for healthcare resource management, focusing on blood bank optimization and emergency response systems.
+            </p>
+            <a href="https://ieeexplore.ieee.org/document/10284940" class="research-link" target="_blank" rel="noopener">
+              <i class="fas fa-external-link-alt"></i>
+              View Publication
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">
+          <span class="title-icon">💬</span>
+          Let's Connect
+        </h2>
+        <div class="title-line"></div>
+      </div>
+      
+      <div class="contact-content">
+        <div class="contact-text">
+          <p>I'm always interested in discussing new opportunities, collaborations, and innovative projects. Feel free to reach out to discuss potential partnerships or simply connect.</p>
+        </div>
+        
+        <div class="contact-links">
+          <a href="https://www.linkedin.com/in/prathamgoel16121/" class="contact-link linkedin" target="_blank" rel="noopener">
+            <div class="contact-icon">
+              <i class="fab fa-linkedin"></i>
+            </div>
+            <div class="contact-info">
+              <span class="contact-label">LinkedIn</span>
+              <span class="contact-value">prathamgoel16121</span>
+            </div>
+          </a>
+          <a href="https://github.com/Pratham16121/" class="contact-link github" target="_blank" rel="noopener">
+            <div class="contact-icon">
+              <i class="fab fa-github"></i>
+            </div>
+            <div class="contact-info">
+              <span class="contact-label">GitHub</span>
+              <span class="contact-value">Pratham16121</span>
+            </div>
+          </a>
+          <a href="https://leetcode.com/u/pratham_goel/" class="contact-link leetcode" target="_blank" rel="noopener">
+            <div class="contact-icon">
+              <img src="https://img.icons8.com/?size=100&id=wDGo581Ea5Nf&format=png&color=000000" alt="LeetCode Icon" width="22" height="22" />
+            </div>
+            <div class="contact-info">
+              <span class="contact-label">LeetCode</span>
+              <span class="contact-value">pratham_goel</span>
+            </div>
+          </a>
+          <a href="https://www.youtube.com/@pratham_goel" class="contact-link youtube" target="_blank" rel="noopener">
+            <div class="contact-icon">
+              <i class="fab fa-youtube"></i>
+            </div>
+            <div class="contact-info">
+              <span class="contact-label">YouTube</span>
+              <span class="contact-value">@pratham_goel</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-text">
+          <p>&copy; 2025 Pratham Goel. All rights reserved.</p>
+          <p>Built with <i class="fas fa-heart"></i> and lots of <i class="fas fa-coffee"></i></p>
+        </div>
+        <div class="footer-links">
+          <a href="#home" class="footer-link">Back to Top</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
