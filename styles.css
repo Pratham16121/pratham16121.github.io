@@ -522,6 +522,12 @@ h3,
 
 .job h3 { font-size: 1.35rem; }
 
+.job h4 {
+  margin: 1.15rem 0 0;
+  font-size: 1.05rem;
+  font-weight: 650;
+}
+
 .org { margin: 0.2rem 0 0; font-size: 0.95rem; }
 
 .job ul {
